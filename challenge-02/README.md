@@ -4,29 +4,34 @@ Nesse exercício, você está livre para escolher os nomes para suas variáveis 
 
 ```js
 // Crie uma função que receba dois argumentos e retorne a soma dos mesmos.
-?
+function soma(x, y){
+  return x + y;
+}
 
 // Declare uma variável que receba a invocação da função criada acima, passando dois números quaisquer por argumento, e somando `5` ao resultado retornado da função.
-?
+var resultsoma = soma(2, 9) + 5;
 
 // Qual o valor atualizado dessa variável?
-?
+16
 
 // Declare uma nova variável, sem valor.
-?
+var a1;
 
 /*
 Crie uma função que adicione um valor à variável criada acima, e retorne a string:
     O valor da variável agora é VALOR.
 Onde VALOR é o novo valor da variável.
 */
-?
+function addstring() {
+  a1 = 21;
+  return 'O valor da variável agora é ' + a1;
+}
 
 // Invoque a função criada acima.
-?
+addstring();
 
 // Qual o retorno da função? (Use comentários de bloco).
-?
+/* 'O valor da variável agora é 21' */
 
 /*
 Crie uma função com as seguintes características:
@@ -35,19 +40,24 @@ Crie uma função com as seguintes características:
     Preencha todos os valores corretamente!
 3. O retorno da função deve ser a multiplicação dos 3 argumentos, somando `2` ao resultado da multiplicação.
 */
-?
-
+function multsum(x, y, z) {
+  if(x === undefined || y === undefined || z === undefined ) {
+    return 'Preencha todos os valores corretamente!';
+  }else {
+    return (x * y * z) + 2;
+  }
+}
 // Invoque a função criada acima, passando só dois números como argumento.
-?
+multsum(1, 2);
 
 // Qual o resultado da invocação acima? (Use comentários para mostrar o valor retornado).
-?
+// 'Preencha todos os valores corretamente!'
 
 // Agora invoque novamente a função criada acima, mas passando todos os três argumentos necessários.
-?
+multsum(1, 2, 3);
 
 // Qual o resultado da invocação acima? (Use comentários para mostrar o valor retornado).
-?
+8
 
 /*
 Crie uma função com as seguintes características:
@@ -58,8 +68,23 @@ Crie uma função com as seguintes características:
 5. Se nenhum argumento for passado, retorne o valor booleano `false`.
 6. E ainda, se nenhuma das condições acima forem atendidas, retorne `null`.
 */
-?
+function summult(x, y, z) {
+  if(x !== undefined && y === undefined && z === undefined) {
+    return x;
+  }else if(x !== undefined && y !== undefined && z === undefined) {
+    return x + y;
+  }else if(x !== undefined && y !== undefined && z !== undefined) {
+    return (x + y) / z;
+  }else if(x === undefined && y === undefined && z === undefined) {
+    return false;
+  }else {
+    return 'null';
+  }
+}
 
 // Invoque a função acima utilizando todas as possibilidades (com nenhum argumento, com um, com dois e com três.) Coloque um comentário de linha ao lado da função com o resultado de cada invocação.
-?
+summult(); //false
+summult(2); // 2
+summult(2,9); // 11
+summult(2, 10, 3); // 4
 ```
